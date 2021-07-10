@@ -6,6 +6,7 @@ import SignUp from '../screens/SignUp/SignUp';
 import Landing from '../screens/LandingScreen/Landing';
 import ImagePick from '../screens/ImagePicker/ImagePicker';
 import Classroom from '../screens/Classroom/Classroom';
+import CreateClass from '../screens/Classroom/CreateClass';
 
 const Stack = createStackNavigator();
 
@@ -36,6 +37,11 @@ const StackNav = () => {
         <Stack.Screen
           component={Classroom}
           name="Classroom"
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          component={CreateClass}
+          name="CreateClass"
           options={{headerShown: false}}
         />
       </Stack.Navigator>

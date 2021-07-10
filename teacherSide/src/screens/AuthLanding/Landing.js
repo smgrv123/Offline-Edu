@@ -67,7 +67,9 @@ const Landing = props => {
         <TouchableOpacity
           style={styles.button1}
           onPress={() => {
-            console.log('yesss');
+            navigation.navigate('CreateClass',{
+              user:user
+            })
           }}>
           <Icon name="plus" color="#BC6FF1" size={30} style={{padding: 15}} />
         </TouchableOpacity>
