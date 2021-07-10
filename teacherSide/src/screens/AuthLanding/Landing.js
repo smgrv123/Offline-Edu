@@ -35,11 +35,11 @@ const Landing = props => {
   };
 
   const navigation = useNavigation();
-
+  
   return (
     <View style={styles.base}>
       <View style={{flex: 0.5, justifyContent: 'center'}}>
-        <Text style={styles.head}>Shiksha!!</Text>
+        <Text style={styles.head}>SHIKSHA</Text>
       </View>
       <View style={{flex: 6, justifyContent: 'center'}}>
         {classData ? (
@@ -47,12 +47,17 @@ const Landing = props => {
             <FlatList
               data={classData}
               renderItem={({item}) => (
-                <View
-                  style={styles.class}>
-                  <Text
-                    style={styles.classText}>
-                    {`ClassID : ${item.classID}`}
-                  </Text>
+                <View style={styles.class}>
+                  <TouchableOpacity
+                    onPress={() => {
+                      navigation.navigate('Classroom', {
+                        classData: classData,
+                      });
+                    }}>
+                    <Text style={styles.classText}>
+                      {`ClassID : ${item.classID}`}
+                    </Text>
+                  </TouchableOpacity>
                 </View>
               )}
               keyExtractor={item => item.contact}
@@ -62,7 +67,7 @@ const Landing = props => {
         <TouchableOpacity
           style={styles.button1}
           onPress={() => {
-            navigation.navigate('ImagePicker');
+            navigation.navigate('ImagePick');
           }}>
           <Icon name="plus" color="#BC6FF1" size={30} style={{padding: 15}} />
         </TouchableOpacity>
