@@ -16,10 +16,13 @@
     "react": "17.0.1",
     "react-native": "0.64.2",
     "react-native-elements": "^3.4.2",
+    "react-native-file-manager": "^1.1.1",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-reanimated": "^2.2.0",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.4.0",
+    "react-native-simple-download-manager": "^1.4.1",
+    "react-native-sms": "^1.11.0",
     "styled-components": "5.2.0"
   },
   "devDependencies": {

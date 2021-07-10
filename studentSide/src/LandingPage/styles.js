@@ -6,24 +6,27 @@ export const Input = styled.TextInput`
   border-width: 1px;
   width: auto;
   height: 50px;
-  background-color: #b5eaea;
+  background-color: #52057b;
+  color: white;
 `;
 
 export const View = styled.View`
   display: flex;
   justify-content: center;
   flex: 1;
-  background-color: #edf6e5;
+  background-color: #000000;
 `;
 
 export const Text = styled.Text`
   align-self: center;
   font-size: 20px;
+  color: #bc6ff1;
 `;
 
 export const Button = styled.TouchableOpacity`
   align-items: center;
-  background-color: #ffbcbc;
+  background-color: #892cdc;
   padding: 10px;
-  margin: 12px;
+  margin: 40px;
+  color: white;
 `;

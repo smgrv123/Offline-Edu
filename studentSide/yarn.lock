@@ -5358,6 +5358,11 @@ react-native-elements@^3.4.2:
     react-native-ratings "8.0.4"
     react-native-size-matters "^0.3.1"
 
+react-native-file-manager@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-file-manager/-/react-native-file-manager-1.1.1.tgz#de9ee05e6ec3409bf84d369e9b553440616dcf9f"
+  integrity sha512-l/8T18s1DYYcnGTMXueyzi9zCiHIqtjAb4dif8sGBvD4YFnKuY2/NXdzJX/G+pvSk4fLlA6AMCV1/p1q+tiSdw==
+
 react-native-gesture-handler@^1.10.3:
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.10.3.tgz#942bbf2963bbf49fa79593600ee9d7b5dab3cfc0"
@@ -5403,10 +5408,20 @@ react-native-screens@^3.4.0:
   dependencies:
     warn-once "^0.1.0"
 
+react-native-simple-download-manager@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-simple-download-manager/-/react-native-simple-download-manager-1.4.1.tgz#43aad0ab00ba4f0e6c9f69f2b70d229b123dbf0c"
+  integrity sha512-6MMxkw7FdVC0eLzmEWG+bfaS24wPBINd0ds5FdvYcOrKiiNtdwZeKwoP/7QjqHDdisuxUUZLaMRmAg5PZWOElw==
+
 react-native-size-matters@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/react-native-size-matters/-/react-native-size-matters-0.3.1.tgz#24d0cfc335a2c730f6d58bd7b43ea5a41be4b49f"
   integrity sha512-mKOfBLIBFBcs9br1rlZDvxD5+mAl8Gfr5CounwJtxI6Z82rGrMO+Kgl9EIg3RMVf3G855a85YVqHJL2f5EDRlw==
+
+react-native-sms@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/react-native-sms/-/react-native-sms-1.11.0.tgz#02e191ef35fae163d7fae1f78f42f202c33f8c9e"
+  integrity sha512-G5q61qGknNyftN1cFkXfH46UkQWMf3fy/M1fxK/QJzLDJAgCSeBqge62FgJClw1FqzYGSjZeoZvkgpWGDCd3wQ==
 
 react-native@0.64.2:
   version "0.64.2"
