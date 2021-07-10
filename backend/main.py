@@ -9,7 +9,7 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 import io
 import os
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageOps
 from werkzeug.utils import secure_filename
 
 ##################### AUTH ##########################################
@@ -42,17 +42,39 @@ def speech_to_text():
 
 @app.route('/image', methods=['POST'])
 def image_to_String():
-    inter = cv2.INTER_AREA
     og_img_path  = request.files['image'].read()
+    height = float(request.values['height'])
+    width = float(request.values['width'])
     npimg = np.fromstring(og_img_path, np.uint8)
     img = cv2.imdecode(npimg,cv2.IMREAD_COLOR)
     img = Image.fromarray(img.astype("uint8"))
-    img = img.resize((round(img.size[0]*0.1), round(img.size[1]*0.1)))
+    img = ImageOps.grayscale(img)
+    img = img.resize((round(img.size[0]*height), round(img.size[1]*width)))
     rawBytes = io.BytesIO()
     img.save(rawBytes, "JPEG")
     rawBytes.seek(0)
     img_base64 = base64.b64encode(rawBytes.read())
     return img_base64
+
+app.config['IMAGE_PATH'] = './images' 
+@app.route('/bs4string', methods = ['POST'])
+def string_to_image():
+  bs64string = request.values['string']
+  height = float(request.values['height'])
+  width = float(request.values['width'])
+  image = base64.b64decode(bs64string)
+  filename = 'image.jpg'
+  path = os.path.join(app.config['IMAGE_PATH'],filename)
+  with open(path, 'wb') as f:
+    f.write(image)
+  image = Image.open(path)
+  image = image.resize((round(image.size[0]*height), round(image.size[1]*width)))
+  rawBytes = io.BytesIO()
+  image.save(rawBytes, "JPEG")
+  rawBytes.seek(0)
+  img_base64 = base64.b64encode(rawBytes.read())
+  return img_base64
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=8080)
