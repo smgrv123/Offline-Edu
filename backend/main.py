@@ -24,7 +24,7 @@ CORS(app)
 @app.route('/')
 def home():
     return 'yipeee'
-app.config['UPLOAD_PATH'] = './uploads' 
+app.config['UPLOAD_PATH'] = './backend/uploads' 
 @app.route('/audio', methods = ['POST'])
 def speech_to_text():  
   f = request.files['mp3']
@@ -56,7 +56,7 @@ def image_to_String():
     img_base64 = base64.b64encode(rawBytes.read())
     return img_base64
 
-app.config['IMAGE_PATH'] = './images' 
+app.config['IMAGE_PATH'] = './backend/images' 
 @app.route('/bs4string', methods = ['POST'])
 def string_to_image():
   bs64string = request.values['string']
