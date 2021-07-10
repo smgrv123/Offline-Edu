@@ -1,0 +1,9 @@
+opencv_contrib_python
+ibm_watson
+ibm_cloud_sdk_core
+Flask
+Flask_Cors
+gunicorn
+numpy
+Werkzeug
+Pillow

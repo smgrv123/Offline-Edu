@@ -18,6 +18,8 @@ target 'teacherSide' do
 
   pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
 
+  pod 'lottie-react-native', :path => '../node_modules/lottie-react-native'
+
   target 'teacherSideTests' do
     inherit! :complete
     # Pods for testing

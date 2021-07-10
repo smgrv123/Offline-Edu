@@ -1,13 +1,10 @@
 import React from 'react';
 import {View, Text} from 'react-native';
+import StackNav from "./src/navigation/StackNav";
 
 const App = () => {
   return (
-    <View>
-      <Text>
-        hello
-      </Text>
-    </View>
+    <StackNav/>
   );
 };
 
