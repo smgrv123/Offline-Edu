@@ -6,12 +6,13 @@ import Icon from 'react-native-vector-icons/Entypo';
 import FormData from 'form-data';
 import Axios from 'axios';
 import Store from '../../Store';
-import {useNavigation} from '@react-navigation/native'
+import {useNavigation} from '@react-navigation/native';
+import SendSMS from 'react-native-sms'
 
-const ImagePick = () => {
+const ImagePick = ({route}) => {
   const [imageValue, setimageValue] = useState();
-
-const navigation=useNavigation()
+  const {contact}=route.params
+  console.log(contact);
 
   let data = new FormData();
   data.append('string', imageValue);
@@ -21,7 +22,8 @@ const navigation=useNavigation()
   useEffect(() => {
     Axios.post('https://offline-edu.breendadas.repl.co/bs4string', data)
       .then(res => {
-        Store.setSMSString(res.data)
+        console.log('yes');
+        Store.setSMSString(res.data);
       })
       .catch(err => {
         console.log(err);
@@ -122,11 +124,26 @@ const navigation=useNavigation()
               marginBottom: '4%',
             }}
             onPress={() => {
-              navigation.navigate('SendScreen')
+              SendSMS.send(
+                {
+                  body: Store.SMSString,
+                  recipients: contact,
+                  successTypes: ['sent', 'queued'],
+                },
+                (completed, cancelled, error) => {
+                  if (completed) {
+                    console.log('SMS Sent Completed');
+                  } else if (cancelled) {
+                    console.log('SMS Sent Cancelled');
+                  } else if (error) {
+                    console.log('Some error occured',error);
+                  }
+                },
+              );
             }}>
             <Text
               style={{fontSize: 20, fontWeight: 'bold', textAlign: 'center'}}>
-              Send
+              Send as SMS
             </Text>
           </TouchableOpacity>
         )}
