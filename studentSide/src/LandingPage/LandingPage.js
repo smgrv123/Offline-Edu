@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
 import {Input, View, Text, Button} from './styles';
-import {Alert} from 'react-native';
+import {Alert, TouchableOpacity} from 'react-native';
 
 export default function LandingPage(props) {
   const [text, onChangeText] = useState('');
@@ -21,6 +21,9 @@ export default function LandingPage(props) {
     <View>
       <Text>Paste your Image code in the input box below</Text>
       <Input onChangeText={res => onChangeText(res)} value={text} />
+      <TouchableOpacity onPress={() => onChangeText('')}>
+        <Text>Clear</Text>
+      </TouchableOpacity>
       <Button onPress={pressHandler}>
         <Text>Convert</Text>
       </Button>

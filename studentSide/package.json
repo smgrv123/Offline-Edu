@@ -23,6 +23,7 @@
     "react-native-screens": "^3.4.0",
     "react-native-simple-download-manager": "^1.4.1",
     "react-native-sms": "^1.11.0",
+    "rn-fetch-blob": "^0.12.0",
     "styled-components": "5.2.0"
   },
   "devDependencies": {
