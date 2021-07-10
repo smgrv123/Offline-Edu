@@ -47,7 +47,7 @@ def image_to_String():
     npimg = np.fromstring(og_img_path, np.uint8)
     img = cv2.imdecode(npimg,cv2.IMREAD_COLOR)
     img = Image.fromarray(img.astype("uint8"))
-    img = img.resize((round(img.size[0]*0.01), round(img.size[1]*0.01)))
+    img = img.resize((round(img.size[0]*0.1), round(img.size[1]*0.1)))
     rawBytes = io.BytesIO()
     img.save(rawBytes, "JPEG")
     rawBytes.seek(0)
