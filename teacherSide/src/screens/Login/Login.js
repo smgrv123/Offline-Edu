@@ -7,7 +7,6 @@ import Pass from 'react-native-vector-icons/MaterialCommunityIcons';
 import auth from '@react-native-firebase/auth';
 import styles from './LoginStyle';
 import Landing from '../AuthLanding/Landing';
-// import EntryDone from './EntryDone';
 
 const LoginScreen = props => {
   const [err, setErr] = useState(true);
@@ -72,10 +71,10 @@ const LoginScreen = props => {
   if (!user) {
     return (
       <View style={styles.base}>
-        <View style={{flex: 2, justifyContent: 'center'}}>
-          <Text style={styles.head}>Dive Into the Fun of Teaching !!</Text>
+        <View style={{flex: 4, justifyContent: 'center'}}>
+          <Text style={styles.head}>Dive Into Shisksha !!</Text>
         </View>
-        <View style={{flex: 8}}>
+        <View style={{flex: 8,justifyContent:'flex-start'}}>
           {signinErr !== null ? (
             <View
               style={{

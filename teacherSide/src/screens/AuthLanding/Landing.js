@@ -1,19 +1,40 @@
-import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {View, Text, TouchableOpacity, FlatList} from 'react-native';
 import styles from './LandingStyles';
 import auth from '@react-native-firebase/auth';
-import { useNavigation } from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/FontAwesome'
+import {useNavigation} from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import firestore from '@react-native-firebase/firestore';
 
 const Landing = props => {
+  const [classData, setclassData] = useState();
+  const [load, setload] = useState(true);
+
   const user = props.user;
+
+  useEffect(() => {
+    setload(true);
+    var temp = [];
+    firestore()
+      .collection('class')
+      .get()
+      .then(snap => {
+        snap.docs.forEach(doc => {
+          temp.push(doc.data());
+        });
+        setclassData(temp);
+      });
+    console.log(classData);
+    setload(false);
+  }, []);
+
   const signOut = () => {
     auth()
       .signOut()
       .then(() => console.log('User signed out!'));
   };
 
-const navigation=useNavigation()
+  const navigation = useNavigation();
 
   return (
     <View style={styles.base}>
@@ -21,19 +42,29 @@ const navigation=useNavigation()
         <Text style={styles.head}>Shiksha!!</Text>
       </View>
       <View style={{flex: 6, justifyContent: 'center'}}>
-        {/* <View
-          style={styles.welcome}>
-          <Text
-            style={styles.welcomeT}>
-            {` Welcome ${user.email}`}
-          </Text>
-        </View> */}
+        {classData ? (
+          <View>
+            <FlatList
+              data={classData}
+              renderItem={({item}) => (
+                <View
+                  style={styles.class}>
+                  <Text
+                    style={styles.classText}>
+                    {`ClassID : ${item.classID}`}
+                  </Text>
+                </View>
+              )}
+              keyExtractor={item => item.contact}
+            />
+          </View>
+        ) : null}
         <TouchableOpacity
           style={styles.button1}
           onPress={() => {
-            navigation.navigate('Info');
+            navigation.navigate('ImagePicker');
           }}>
-          <Icon name='plus' color='#BC6FF1' size={30} style={{padding:20}} />
+          <Icon name="plus" color="#BC6FF1" size={30} style={{padding: 15}} />
         </TouchableOpacity>
       </View>
       <View style={{flex: 2}}>

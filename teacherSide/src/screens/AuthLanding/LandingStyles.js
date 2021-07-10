@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   base: {
     backgroundColor: '#000',
     flex: 1,
-    paddingTop:"10%"
+    paddingTop: '10%',
   },
   button1: {
     alignSelf: 'center',
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     paddingLeft: '2%',
     paddingRight: '2%',
   },
-  welcomeT:{
+  welcomeT: {
     color: '#F38BA0',
     textAlign: 'center',
     fontSize: 22,
@@ -41,12 +41,26 @@ const styles = StyleSheet.create({
     paddingBottom: '2%',
     paddingTop: '2%',
   },
-  welcome:{
+  welcome: {
     alignSelf: 'center',
     alignContent: 'center',
     backgroundColor: '#F38BA0',
     elevation: 20,
     borderRadius: 5,
-  }
+  },
+  class: {
+    marginLeft: '25%',
+    marginRight: '25%',
+    paddingTop: '2.5%',
+    paddingBottom: '2.5%',
+    borderRadius: 10,
+    backgroundColor: '#892CDC',
+  },
+  classText: {
+    color: '#000',
+    fontWeight: 'bold',
+    fontSize: 18,
+    textAlign: 'center',
+  },
 });
 export default styles;
