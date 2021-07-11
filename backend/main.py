@@ -61,7 +61,7 @@ def home():
 def mp3():
     id = request.values['id']
     id = id.split('d/')[1].split('/')[0]
-    destination = '.backend/uploads/3.mp3' 
+    destination = './backend/uploads/3.mp3' 
     download_file_from_google_drive(id, destination)
     authenticator = IAMAuthenticator(apikey)
     stt = SpeechToTextV1(authenticator=authenticator)
