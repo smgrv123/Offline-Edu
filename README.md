@@ -19,13 +19,25 @@ Internet connection is a mandatory requirement for multimedia files transfer, st
   
 ## Teacher Application: 
   The application lets a teacher to login or signup to their account. The teacher can create a classroom and add the phone numbers of her students to the classroom. They she can click a picture of the class note, record an audio related to the note if required and click on send. Backend of the application converts the multimedia to text and send an sms to all the phone numbers listed in the classroom.
+ <img src='https://user-images.githubusercontent.com/55049859/125185567-354f2e80-e243-11eb-95d1-8f51c7923fd4.png' heigth=300 width=200 />
+<img src='https://user-images.githubusercontent.com/55049859/125185581-48fa9500-e243-11eb-98a7-736f108e3e5a.png' heigth=300 width=200 />
+<img src='https://user-images.githubusercontent.com/55049859/125185589-56b01a80-e243-11eb-8248-d15dca306b3e.png' heigth=300 width=200 />
+ <img src='https://user-images.githubusercontent.com/55049859/125185600-66c7fa00-e243-11eb-96be-d95a83f611eb.png' heigth=300 width=200 />
+<img src='https://user-images.githubusercontent.com/55049859/125185610-747d7f80-e243-11eb-87f0-0d19d7c34ced.png' heigth=300 width=200 />
+
+
 
 ## Student Application:
   The student has to download an application only once, rest works offline. Once the sms is received, the audio its received as text sms, the image is sent as an encoded string. The student has to copy the image string and paste in the downloaded application to see the image. Hence the entire process(except one-time downloading the app) is happens offline. 
+ 
+<img src='https://user-images.githubusercontent.com/55049859/125185429-64b16b80-e242-11eb-8ab0-5fc08d9e2a1d.png' heigth=300 width=200 />
+<img src='https://user-images.githubusercontent.com/55049859/125185469-99252780-e242-11eb-9196-4d48e498a3b5.png' heigth=300 width=200 />
+  <img src='https://user-images.githubusercontent.com/55049859/125185483-ae01bb00-e242-11eb-805c-d3df3ce8c2af.png' heigth=300 width=200 />
 
+ 
 ## Future Development:
   Reduce the size of image string while keeping the resolution good to limit the number of sms texts send. Improvise to sending videos by converting frames to texts. Allow longer audio files to be sent on sms.
-  
+ 
 <!-- ## Challenges we ran into --
 
 >
