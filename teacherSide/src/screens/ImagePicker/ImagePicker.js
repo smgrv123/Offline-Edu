@@ -11,8 +11,14 @@ import SendSMS from 'react-native-sms'
 
 const ImagePick = ({route}) => {
   const [imageValue, setimageValue] = useState();
-  const {contact}=route.params
-  console.log(contact);
+  const [SMSstring, setSMSstring] = useState();
+  const {classData}=route.params
+  
+  let contact=[]
+
+  classData.forEach((res)=>{
+    contact.push(res.Contact)
+  })
 
   let data = new FormData();
   data.append('string', imageValue);
@@ -22,8 +28,8 @@ const ImagePick = ({route}) => {
   useEffect(() => {
     Axios.post('https://offline-edu.breendadas.repl.co/bs4string', data)
       .then(res => {
-        console.log('yes');
-        Store.setSMSString(res.data);
+        console.log('yes',res.data);
+        setSMSstring(res.data);
       })
       .catch(err => {
         console.log(err);
@@ -126,7 +132,7 @@ const ImagePick = ({route}) => {
             onPress={() => {
               SendSMS.send(
                 {
-                  body: Store.SMSString,
+                  body: SMSstring,
                   recipients: contact,
                   successTypes: ['sent', 'queued'],
                 },

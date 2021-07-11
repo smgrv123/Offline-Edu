@@ -72,7 +72,7 @@ const LoginScreen = props => {
     return (
       <View style={styles.base}>
         <View style={{flex: 4, justifyContent: 'center'}}>
-          <Text style={styles.head}>Dive Into Shisksha !!</Text>
+          <Text style={styles.head}>Log In to Your Classroom</Text>
         </View>
         <View style={{flex: 8,justifyContent:'flex-start'}}>
           {signinErr !== null ? (

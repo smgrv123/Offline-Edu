@@ -4,29 +4,14 @@ import styles from './LandingStyles';
 import auth from '@react-native-firebase/auth';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import firestore from '@react-native-firebase/firestore';
+import Store from '../../Store';
+import {Input} from 'react-native-elements';
 
 const Landing = props => {
-  const [classData, setclassData] = useState();
+  const [classID, setclassID] = useState();
   const [load, setload] = useState(true);
 
   const user = props.user;
-
-  useEffect(() => {
-    setload(true);
-    var temp = [];
-    firestore()
-      .collection('class')
-      .get()
-      .then(snap => {
-        snap.docs.forEach(doc => {
-          temp.push(doc.data());
-        });
-        setclassData(temp);
-      });
-    console.log(classData);
-    setload(false);
-  }, []);
 
   const signOut = () => {
     auth()
@@ -35,46 +20,51 @@ const Landing = props => {
   };
 
   const navigation = useNavigation();
-  
+
   return (
     <View style={styles.base}>
       <View style={{flex: 0.5, justifyContent: 'center'}}>
-        <Text style={styles.head}>SHIKSHA</Text>
+        <Text style={styles.head}>OFFLINE EDU</Text>
       </View>
       <View style={{flex: 6, justifyContent: 'center'}}>
-        {classData ? (
-          <View>
-            <FlatList
-              data={classData}
-              renderItem={({item}) => (
-                <View style={styles.class}>
-                  <TouchableOpacity
-                    onPress={() => {
-                      navigation.navigate('Classroom', {
-                        classData: classData,
-                      });
-                    }}>
-                    <Text style={styles.classText}>
-                      {`ClassID : ${item.classID}`}
-                    </Text>
-                  </TouchableOpacity>
-                </View>
-              )}
-              keyExtractor={item => item.contact}
-            />
-          </View>
-        ) : null}
+        <Input
+          placeholder="Please Enter ClassID"
+          onChangeText={res => {
+            setclassID(res);
+          }}
+          keyboardType="number-pad"
+          style={{backgroundColor: '#52057B', borderRadius: 5, color: '#000'}}
+          placeholderTextColor="#000"
+        />
+        <TouchableOpacity
+          onPress={() => {
+            Store.setClassID(classID);
+            console.log(classID);
+            if (classID ) {
+              navigation.navigate('Classroom', {
+                user: user,
+              });
+            }
+          }}
+          style={styles.button1}>
+          <Text style={styles.text1}>View Class Details</Text>
+        </TouchableOpacity>
         <TouchableOpacity
           style={styles.button1}
           onPress={() => {
-            navigation.navigate('CreateClass',{
-              user:user
-            })
+            navigation.navigate('CreateClass', {
+              user: user,
+            });
           }}>
-          <Icon name="plus" color="#BC6FF1" size={30} style={{padding: 15}} />
+          <Icon
+            name="plus"
+            color="#BC6FF1"
+            size={30}
+            style={{paddingLeft: 15, paddingRight: 15}}
+          />
         </TouchableOpacity>
       </View>
-      <View style={{flex: 2}}>
+      <View style={{flex: 1}}>
         <TouchableOpacity
           style={styles.button1}
           onPress={() => {

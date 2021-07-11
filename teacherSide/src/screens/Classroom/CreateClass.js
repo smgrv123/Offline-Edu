@@ -25,19 +25,31 @@ const CreateClass = ({route}) => {
       })
       .then(() => {
         console.log('done');
-        navigation.navigate('CreateClass');
+        setclassID('')
+        setstudentName('')
+        setcontact('')
       })
       .catch(err => console.log(err));
   };
   return (
     <View style={{flex: 1, backgroundColor: '#000'}}>
-      <View style={{flex: 3,justifyContent:"center"}}>
-        <Text style={{color:"#BC6FF1",textAlign:'center',fontSize:35,fontWeight:"bold"}} > {`Student Details`} </Text>
+      <View style={{flex: 3, justifyContent: 'center'}}>
+        <Text
+          style={{
+            color: '#BC6FF1',
+            textAlign: 'center',
+            fontSize: 35,
+            fontWeight: 'bold',
+          }}>
+          {' '}
+          {`Student Details`}{' '}
+        </Text>
       </View>
       <View style={{paddingLeft: '2.5%', paddingRight: '2.5%', flex: 8}}>
         <Input
           placeholder="ClassID"
           keyboardType="number-pad"
+          value={classID}
           onChangeText={res => {
             setclassID(res);
           }}
@@ -47,6 +59,7 @@ const CreateClass = ({route}) => {
         <Input
           placeholder="Name of Student"
           keyboardType="ascii-capable"
+          value={studentName}
           onChangeText={res => {
             setstudentName(res);
           }}
@@ -56,6 +69,7 @@ const CreateClass = ({route}) => {
         <Input
           placeholder="Contact Number"
           keyboardType="phone-pad"
+          value={contact}
           onChangeText={res => {
             setcontact(res);
           }}

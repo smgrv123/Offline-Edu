@@ -8,7 +8,7 @@ const Landing = props => {
   return (
     <View style={styles.background}>
       <View style={{flex: 2, justifyContent: 'center'}}>
-        <Text style={styles.heading}>Shiksha</Text>
+        <Text style={styles.heading}>Offline EDU</Text>
       </View>
       <View style={{flex: 8, justifyContent: 'center'}}>
         <LottieView

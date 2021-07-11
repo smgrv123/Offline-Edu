@@ -2,7 +2,7 @@ import {observable, makeAutoObservable} from 'mobx';
 
 class Store {
   SMSString = '';
-  Heading = '';
+  classID = '';
   constructor() {
     makeAutoObservable(this);
   }
@@ -10,8 +10,8 @@ class Store {
   setSMSString(res) {
     this.SMSString = res;
   }
-  setHeading(head) {
-    this.Heading = head;
+  setClassID(head) {
+    this.classID = head;
   }
 }
 
