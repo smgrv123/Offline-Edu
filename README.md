@@ -19,6 +19,9 @@ Internet connection is a mandatory requirement for multimedia files transfer, st
   
 ## Teacher Application: 
   The application lets a teacher to login or signup to their account. The teacher can create a classroom and add the phone numbers of her students to the classroom. They she can click a picture of the class note, record an audio related to the note if required and click on send. Backend of the application converts the multimedia to text and send an sms to all the phone numbers listed in the classroom.
+ ### APK
+ <a href='https://drive.google.com/drive/folders/1W87Kej-ftzesTQJanqB-6ovh1Dj0Nw6e?usp=sharing'>Click Here to Download </a>
+ 
  <img src='https://user-images.githubusercontent.com/55049859/125185567-354f2e80-e243-11eb-95d1-8f51c7923fd4.png' heigth=300 width=200 />
 <img src='https://user-images.githubusercontent.com/55049859/125185581-48fa9500-e243-11eb-98a7-736f108e3e5a.png' heigth=300 width=200 />
 <img src='https://user-images.githubusercontent.com/55049859/125185589-56b01a80-e243-11eb-8248-d15dca306b3e.png' heigth=300 width=200 />
@@ -29,6 +32,8 @@ Internet connection is a mandatory requirement for multimedia files transfer, st
 
 ## Student Application:
   The student has to download an application only once, rest works offline. Once the sms is received, the audio its received as text sms, the image is sent as an encoded string. The student has to copy the image string and paste in the downloaded application to see the image. Hence the entire process(except one-time downloading the app) is happens offline. 
+ 
+<a href='https://drive.google.com/file/d/1mECRUEC9p2pzdFT_BFiOoZsPkS0QLnkM/view?usp=sharing'>Click here to download</a>
  
 <img src='https://user-images.githubusercontent.com/55049859/125185429-64b16b80-e242-11eb-8ab0-5fc08d9e2a1d.png' heigth=300 width=200 />
 <img src='https://user-images.githubusercontent.com/55049859/125185469-99252780-e242-11eb-9196-4d48e498a3b5.png' heigth=300 width=200 />
