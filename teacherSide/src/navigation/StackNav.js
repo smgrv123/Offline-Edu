@@ -8,6 +8,7 @@ import ImagePick from '../screens/ImagePicker/ImagePicker';
 import Classroom from '../screens/Classroom/Classroom';
 import CreateClass from '../screens/Classroom/CreateClass';
 import Transcript from '../screens/Transcript/Transcript';
+import SendTrans from '../screens/sendSMS/SendTrans';
 
 const Stack = createStackNavigator();
 
@@ -46,9 +47,14 @@ const StackNav = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen
-        component={Transcript}
-        name='Transcipt'
-        options={{headerShown:false}}
+          component={Transcript}
+          name="Transcipt"
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          component={SendTrans}
+          name="SendTrans"
+          options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>
