@@ -32,7 +32,7 @@ Internet connection is a mandatory requirement for multimedia files transfer, st
 
 ## Student Application:
   The student has to download an application only once, rest works offline. Once the sms is received, the audio its received as text sms, the image is sent as an encoded string. The student has to copy the image string and paste in the downloaded application to see the image. Hence the entire process(except one-time downloading the app) is happens offline. 
- 
+ ### APK
 <a href='https://drive.google.com/file/d/1mECRUEC9p2pzdFT_BFiOoZsPkS0QLnkM/view?usp=sharing'>Click here to download</a>
  
 <img src='https://user-images.githubusercontent.com/55049859/125185429-64b16b80-e242-11eb-8ab0-5fc08d9e2a1d.png' heigth=300 width=200 />
