@@ -6,7 +6,7 @@
 ---
 
 
-## Our problem statement
+## Our problem statement ( <a href='https://youtu.be/fALpeSkyPCI'>YOUTUBE VIDEO </a>)
 
 > Technology is termed as a blessing that should comfort our daily lives. But for efficient use of software technology, internet connection is a must. With the advent of the recent pandemic, majority of lives have preached applications using strong internet connection to perform their daily activities. Starting from commerce to job meetings to education, everything is based on a stable connection to the World Wide Web.  But how much of the world exactly benefits from this technological bliss?
 As of 2021, 34.4% of the world or 2.44 billion people still do not have an access to internet services, hence have remained disconnected from the world for about 2 years, during the ongoing pandemic[source1]. According to UNICEF [source2], two-thirds of all children in the world(about 170 million children) do not have access to internet. Merely 8.5% of Indian students have access to internet, hence for majority of children in the world and in India, education is on stand still for about 2 years now. 
@@ -15,6 +15,40 @@ Internet connection is a mandatory requirement for multimedia files transfer, st
 ## Solution
  > We have designed a system that allows a teacher to send notes as media files (image, audio and text)  by converting these to text only messages and sending the files through SMS to his/her students, thereby letting students receive the media files offline. Only the teachers require a moderate to stable internet connection on their side, the students do need internet connection at all. Hence we strive to achieve a smooth offline education system for all, so that no child misses out on his/ her development.
 
+ 
+## Project Components
+Front-end:
+* React-native
+
+Backend: 
+* Flask 
+* IBM Watson
+ 
+ 
+# Instalation 
+ ```
+ git clone  https://github.com/smgrv123/Offline-Edu
+ cd Offline-Edu
+ ```
+## Backend
+ ```
+ cd backend
+ pip3 install -r requirements.txt
+ python3 main.py
+ ```
+## Frontend
+### Teacher-side
+ ```
+ cd teacherSide
+ npm install 
+ react-native run-android
+ ```
+### Student-side
+ ```
+ cd studentSide
+ npm install 
+ react-native run-android
+ ```
 # Working
   
 ## Teacher Application: 
@@ -29,6 +63,8 @@ Internet connection is a mandatory requirement for multimedia files transfer, st
 <img src='https://user-images.githubusercontent.com/55049859/125185610-747d7f80-e243-11eb-87f0-0d19d7c34ced.png' heigth=300 width=200 />
 
 
+
+ 
 
 ## Student Application:
   The student has to download an application only once, rest works offline. Once the sms is received, the audio its received as text sms, the image is sent as an encoded string. The student has to copy the image string and paste in the downloaded application to see the image. Hence the entire process(except one-time downloading the app) is happens offline. 
