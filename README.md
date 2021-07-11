@@ -38,9 +38,12 @@ Internet connection is a mandatory requirement for multimedia files transfer, st
 ## Future Development:
   Reduce the size of image string while keeping the resolution good to limit the number of sms texts send. Improvise to sending videos by converting frames to texts. Allow longer audio files to be sent on sms.
  
-<!-- ## Challenges we ran into --
+## Challenges we ran into --
+1. Reading SMS automatically from the device 
+2. Converting Image into compressed base64 string
+3. Sending SMS of base64 string
 
->
+
 <!-- 
 ## Features offered by Offline-EDU
 
@@ -52,6 +55,7 @@ Internet connection is a mandatory requirement for multimedia files transfer, st
   - An interface for a patient to browse through nearby hospitals and select a hospital based on its performance, also observe        his/her medical history live.
 ## Technology Stack and Dependencies
  -->
+ ## Technology Stack and Dependencies
 - **ML**
   - numpy
   - IBM Watson
