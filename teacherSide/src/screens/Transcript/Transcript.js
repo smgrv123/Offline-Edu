@@ -19,18 +19,18 @@ const Transcript = ({route}) => {
     contact.push(res.Contact);
   });
 
-
-
   const tranc = () => {
     Axios.post('https://offline-edu.breendadas.repl.co/mp3', form)
       .then(res => {
         res.data.results.forEach(res => {
-          trans.concat(res.transcript);
+          console.log(res.alternatives[0].transcript);
+          trans=res.alternatives[0].transcript;
         });
+        console.log('saj',trans);
         settranArr(trans);
         navigation.navigate('SendTrans', {
           tran: tranArr,
-          contact:contact
+          contact: contact,
         });
       })
       .catch(err => console.log(err));

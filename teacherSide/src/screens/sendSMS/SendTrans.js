@@ -3,12 +3,13 @@ import SendSMS from 'react-native-sms';
 import {View, Text, TouchableOpacity} from 'react-native';
 
 const SendTrans = ({route}) => {
-    const {contact,tranArr}=route.params
+    const {contact,tran}=route.params
+    console.log("tran",tran);
     const sendSMS = () => {
         console.log('yes');
         SendSMS.send(
           {
-            body: tranArr,
+            body: tran,
             recipients: contact,
             successTypes: ['sent', 'queued'],
           },
@@ -29,8 +30,10 @@ const SendTrans = ({route}) => {
       }, 1000);
 
   return (
-    <View>
-      <Text>uwef</Text>
+    <View style={{flex:1,backgroundColor:"#000",justifyContent:"center"}}>
+      <Text style={{textAlign:'center',color:"#52057B",fontSize:40}} >
+          Loading...
+      </Text>
     </View>
   );
 };
