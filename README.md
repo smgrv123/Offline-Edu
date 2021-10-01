@@ -6,14 +6,9 @@
 ---
 
 
-## Our problem statement ( <a href='https://youtu.be/fALpeSkyPCI'>YOUTUBE VIDEO </a>)
+## Our problem statement ( <a href='https://youtu.be/fALpeSkyPCI'>VIDEO LINK</a>)
 
-> Technology is termed as a blessing that should comfort our daily lives. But for efficient use of software technology, internet connection is a must. With the advent of the recent pandemic, majority of lives have preached applications using strong internet connection to perform their daily activities. Starting from commerce to job meetings to education, everything is based on a stable connection to the World Wide Web.  But how much of the world exactly benefits from this technological bliss?
-As of 2021, 34.4% of the world or 2.44 billion people still do not have an access to internet services, hence have remained disconnected from the world for about 2 years, during the ongoing pandemic[source1]. According to UNICEF [source2], two-thirds of all children in the world(about 170 million children) do not have access to internet. Merely 8.5% of Indian students have access to internet, hence for majority of children in the world and in India, education is on stand still for about 2 years now. 
-Internet connection is a mandatory requirement for multimedia files transfer, starting from image to videos, audio files, streaming services etc. Even sending media other than text on SMS requires a stable mobile data internet connection, which is infeasible and very expensive for most of the children in the world. 
-
-## Solution
- > We have designed a system that allows a teacher to send notes as media files (image, audio and text)  by converting these to text only messages and sending the files through SMS to his/her students, thereby letting students receive the media files offline. Only the teachers require a moderate to stable internet connection on their side, the students do need internet connection at all. Hence we strive to achieve a smooth offline education system for all, so that no child misses out on his/ her development.
+> We have designed a system that allows a teacher to send notes as media files (image, audio and text) by converting these to text only messages and sending the files through SMS to his/her students, thereby letting students receive the media files offline. Only the teachers require a moderate to stable internet connection on their side, the students do not need internet connection at all. Hence we strive to achieve a smooth offline education system for all, so that no child misses out on his/ her development. 
 
  
 ## Project Components
